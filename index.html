@@ -16,14 +16,202 @@
         <link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css">
         <!-- custom style -->
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/theme.css">
 
     </head>
 
-  
+
     <body>
-        <h1>Hello World!</h1>
-        <p>Hey there, just testing out github and netlify...</p>
+        <nav>
+            <!-- top nav, desktop and tablet -->
+            <div class="w3-bar w3-theme-d1">
+                <a href="#" class="w3-bar-item w3-button">Hydro Flask</a>
+                <a href="#home" class="w3-bar-item w3-button">Home</a>
+                <a href="#about" class="w3-bar-item w3-button w3-hide-small">About</a>
+                <a href="#features" class="w3-bar-item w3-button w3-hide-small">Features</a>
+                <a href="#buy" class="w3-bar-item w3-button w3-hide-small">Buy</a>
+                <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="topNav()">&#9776;</a>
+            </div>
+            <!-- top nav, mobile -->
+            <div id="mobileNav" class="w3-bar-block w3-theme-d1 w3-hide w3-hide-large w3-hide-medium">
+                <a href="#home" class="w3-bar-item w3-button">Home</a>
+                <a href="#about" class="w3-bar-item w3-button">About</a>
+                <a href="#features" class="w3-bar-item w3-button">Features</a>
+                <a href="#buy" class="w3-bar-item w3-button">Buy</a>
+            </div>
+        </nav>
+
+        <!-- First Parallax Image with Logo Text -->
+        <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+            <div class="w3-display-middle" style="white-space:nowrap;">
+                <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity w3-theme-d2">Saving the World from Lukewarm</span>
+            </div>
+        </div>
+
+        <!-- Container (About Section) -->
+
+        <div class="w3-container w3-padding-64 w3-theme-l1" id="about">
+            <div class="w3-row">
+                <h2 class="w3-center">About Hydro Flasks</h2>
+            </div>
+            <div class="w3-row">
+                <div class="w3-third">
+                    <div class="w3-card-2">
+                        <div class="w3-center w3-jumbo">
+                            <i class="fa fa-book w3-text-theme2"></i>
+                        </div>
+                        <div class="w3-container w3-center w3-theme-d1 w3-hover-shadow">
+                            <h3 class="w3-text-white">
+                                Bend, Oregon
+                            </h3>
+                            <h4>With deserts to the east and mountains to the west of town, our geography says a lot about who we are and what our products can do</h4>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="w3-third">
+                    <div class="w3-card-2">
+                        <div class="w3-center w3-jumbo">
+                            <i class="fa fa-book w3-text-theme2"></i>
+                        </div>
+                        <div class="w3-container w3-center w3-theme-d1 w3-hover-shadow">
+                            <h3 class="w3-text-white">
+                                Hot and Cold
+                            </h3>
+                            <h4>From steaming hot choclate on the ski mountain to icy water after a summer hike, we don't accept "lukewarm"</h4>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="w3-third">
+                    <div class="w3-card-2">
+                        <div class="w3-center w3-jumbo">
+                            <i class="fa fa-book w3-text-theme2"></i>
+                        </div>
+                        <div class="w3-container w3-center w3-theme-d1 w3-hover-shadow">
+                            <h3 class="w3-text-white">
+                                Founded in 2009
+                            </h3>
+                            <h4>We are committed to refreshing you on every kind of adventure with products for hydration, coffee, beer, and food</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+
+        </div>
+
+        <!-- First Parallax Image with Logo Text -->
+        <div class="bgimg-2 w3-display-container w3-opacity-min" id="about">
+        </div>
+
+
+        <!-- Container (Training Section) -->
+        <div   id="features">
+
+            <!-- Container (Training Section) -->
+            <div  id="features">
+
+                <div class="w3-row w3-container">
+                    <h2 class="w3-center w3-theme-d1 ">Features</h2>
+                </div>
+
+                <div class="w3-row">
+                    <div class="w3-half">
+
+                        <div class="w3-card">
+                            <img src="img/hydro-waterfall.jpg" class="w3-image" alt="People in snow" style="width: 100%; height: auto;">
+                        </div>
+
+
+                    </div>
+
+                    <div class="w3-half">
+
+                        <div class="w3-bar w3-theme-d1 w3-black">
+                            <button class="w3-bar-item w3-button" onclick="openTab('Design')">Design</button>
+                            <button class="w3-bar-item w3-button" onclick="openTab('Insulation')">Insulation</button>
+                            <button class="w3-bar-item w3-button" onclick="openTab('Warranty')">Warranty</button>
+                        </div>
+
+                        <div id="Design" class="tab">
+                            <h4 style="text-align: center">Design</h4>
+                            <p>The drinkware is crafted from BPA free, 18/8 stainless steel. The colorful powder coating on the outside of the bottle is durable and provides a finger print free texture that is easy to clean. The double-walled vacuum insulation prevents condensation from forming on the exterior.</p>
+                        </div>
+
+                        <div id="Insulation" class="tab" style="display:none">
+                            <h4 style="text-align: center;">Insulation</h4>
+                            <p>All products have double-walled vacuum insulation technology. The space between the stainless steel walls are void of matter, with no medium for heat to transfer. Your drinks temperature will not be affected by the temperature outside the container, staying cold up to 24 hours and hot up to 12 hours.</p> 
+                        </div>
+
+                        <div id="Warranty" class="tab" style="display:none">
+                            <h4 style="text-align: center">Warranty</h4>
+                            <p>We guarantee every Hydro Flask product against manufacturer's defects for 100 years or one lifetime, whichever comes first.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second Parallax Image with Logo Text -->
+                <div class="bgimg-3 w3-display-container w3-opacity-min" id="about">
+                </div>
+
+
+                <!-- Container (Training Section) -->
+                <div cl id="buy">
+
+                    <div class="w3-row w3-container w3-theme-d1">
+                        <h1 style="text-align: center">Buy</h1>
+                    </div>
+
+                    <div class="w3-row">
+                        <div class="w3-half">
+
+                            <div class="w3-card">
+                                <img src="img/hydro-ocean.jpg" class="w3-image" alt="People in snow" style="width: 100%; height: auto;">
+                            </div>
+
+
+                        </div>
+
+                        <div class="w3-half">
+
+                            <button onclick="accordion('hydration')" class="w3-btn w3-block w3-theme-l1 w3-left-align">Hydration</button>
+
+                            <div id="hydration" class="w3-container w3-hide w3-theme-l5">
+                                <h5 style="text-align: center">Hydration</h5>
+                                <p>For bottles, we have width mouth, standard mouth and one especially for kids, We also have tumblers for coffee, tea, or anything hot. We have specialized containers for beer and wine to keep them whatever temperature you want.</p>
+                            </div>
+
+                            <button onclick="accordion('gear')" class="w3-btn w3-block w3-theme-l1 w3-left-align">Gear</button>
+
+                            <div id="gear" class="w3-container w3-hide w3-theme-l5">
+                                <h5 style="text-align: center">Gear</h5>
+                                <p>Along with our bottles, we also sell food flasks, coolers for drinks, brushes to clean bottles, and exclusive Hydro Flask apparel.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Fourth Parallax Image with Logo Text -->
+                <div class="bgimg-4 w3-display-container w3-opacity-min" id="about">
+                </div>
+                
+            </div>
+        </div>
+
+
+        <script src="js/tabs.js"></script>
+        <script src="js/topNav.js"></script>
+        <script src="js/accordion.js"></script>
+
     </body>
-    
+
 
 </html>
